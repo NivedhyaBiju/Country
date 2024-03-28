@@ -10,19 +10,18 @@
     <div class="card">
         <img src="./map.png" alt="" style="width: 100vmax; height: 100vmax; filter: blur(5px);">
         <div class="card-img-overlay" style="font-family: 'Times New Roman', Times, serif";>
-            <h1 class="card-title text-center display-6">GET COUNTRY DETAILS</h1>
-            <div class="row container" style="margin-left: 400px; margin-top: 50px;">
-                <div class="col-lg-6">
+            <h1 class="card-title display-6">GET COUNTRY DETAILS</h1>
+            <div class="row container">
+                <div class="col-lg-4">
                     <div class="d-flex">
                         <input id="c1" class="form-control shadow" type="text" placeholder="Enter the name of country">
-                        <button onclick="fetchData()" class="btn btn-success mt-3">Search</button>
+                        <button onclick="fetchData()" class="btn btn-success">Search</button>
                     </div>
                     <div id="result" class="row shadow" style="margin-top: 50px;"></div>
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 <script>
     function fetchData(){
@@ -39,19 +38,19 @@
         var flag=dataArray[0].flag
         result.innerHTML=`
         <div class="card" style="width:100%;">
-  <img src="${flag}" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">${countryName}</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><h6>CAPITAL:</h6>${capital}</li>
-    <li class="list-group-item"><h6>POPULATION:</h6>${population}</li>
-    <li class="list-group-item"><h6>CURRENCY NAME:</h6>${currencyName}</li>
-    <li class="list-group-item"><h6>CURRENCY SYMBOL:</h6>${currencySymbol}</li>
-    <li class="list-group-item"><h6>LANGUAGE:</h6>${language}</li>
-  </ul>
-</div>
-`
-}
+            <img src="${flag}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${countryName}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><h6>CAPITAL:</h6>${capital}</li>
+                    <li class="list-group-item"><h6>POPULATION:</h6>${population}</li>
+                    <li class="list-group-item"><h6>CURRENCY NAME:</h6>${currencyName}</li>
+                    <li class="list-group-item"><h6>CURRENCY SYMBOL:</h6>${currencySymbol}</li>
+                    <li class="list-group-item"><h6>LANGUAGE:</h6>${language}</li>
+                    </ul>
+                    </div>
+                    `
+                    }
 </script>
 </html>
